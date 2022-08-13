@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./styles";
 import { Link } from "react-router-dom";
+import { BiSearch } from "react-icons/bi";
 import Logo from "img/Logo.png";
 import Login from "img/LogIn.png";
 import Cadastro from "img/Cadastro.png";
@@ -13,6 +14,12 @@ const Menu = () => {
                     <img src={ Logo } alt="" />
                 </Link>
             </picture>
+            <div>
+                <form action="">
+                    <input type="text" placeholder="Search..."/>
+                    <button type="submit"><BiSearch/></button>
+                </form>
+            </div>
             <nav>
                 <ul>
                     <li>
