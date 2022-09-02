@@ -9,13 +9,19 @@ export const Home = styled.section`
     justify-content: center;
     flex-direction: column;
     h1{
-        margin-top: 5px;
+        margin-top: 10vh;
         display: flex;
         justify-content: center;
         height: 40px;
         width: 100%;
     }
-    div{
+    a{
+        display:flex;
+        justify-content: center;
+        width: 100%;
+
+    }
+    div.assuntos{
         margin-top: 20px;
         display: flex;
         align-items: center;
@@ -26,13 +32,25 @@ export const Home = styled.section`
                 margin: 5px;
                 list-style-type: none;
                 h2{
-                    margin-left: 15Ppx;
                     justify-content: center;
+                    text-align: center;
                 }
                 img{
-                    height: 250px;
+                    height: 300px;
                 }
             }
+        }
+    }
+    div.glissando{
+        margin-top:100px;
+    }
+    div.more{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            height: 60px;
+            margin-top: 5px;
         }
     }
 `

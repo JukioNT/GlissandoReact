@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { colors } from "styles/GlobalStyle"
 
 export const Section = styled.section`
-    height: 60vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;

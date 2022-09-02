@@ -5,12 +5,13 @@ import Sax2 from "img/Pintura (2).png"
 import Guitar from "img/Pintura (3).png"
 import Violin from "img/Pintura (4).png"
 import Violin2 from "img/Pintura (5).png"
+import LearnMore from "img/Learn More.png"
 
 const Home = () => {
     return(
         <S.Home>
             <h1>Principais Assuntos</h1>
-            <div>
+            <div className="assuntos">
                 <ul>
                     <li>
                         <h2>Mais</h2>
@@ -51,6 +52,13 @@ const Home = () => {
                         <img src={ Violin2 } alt="" />
                     </li>
                 </ul>
+            </div>
+            <div className="glissando">
+                <h1>Glissando</h1>
+            </div>
+            <a>O site para aprender teoria musical</a>
+            <div className="more">
+                <img src={ LearnMore } alt="" />
             </div>
         </S.Home>
     );
