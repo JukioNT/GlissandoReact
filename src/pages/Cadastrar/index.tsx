@@ -1,37 +1,35 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { FaKey } from "react-icons/fa"
-import { BsFillPersonFill } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
+import Person02 from "../../img/Person02.gif";
 
-import * as S from "./styles";
-import { ButtonComponent } from "components";
+import * as S from "../Login/styles";
 
 const Cadastrar = () => {
     return (
         <S.Section>
-            <h1>Cadastre-se</h1>
-            <form action="cadastrar.html" method="post">
-                <label htmlFor="nome">Nome</label>
-                <div>
-                    <BsFillPersonFill />
-                    <input type="text" name="nome" id="id" placeholder="Nome" />
+            <div className="main">
+                <div className="left">
+                    <h1>Comece a aprender música</h1>
+                    <img src={ Person02 } alt="" />
                 </div>
-                <label htmlFor="email">Email</label>
-                <div>
-                    <MdEmail />
-                    <input type="email" name="email" id="id" placeholder="E-mail" />
+                <div className="right">
+                    <div className="form">
+                        <h1>Cadastro</h1>
+                        <div className="textfield">
+                            <label htmlFor="usuario">Usuario</label>
+                            <input type="text" name="usuario" placeholder="Usuário" />
+                        </div>
+                        <div className="textfield">
+                            <label htmlFor="senha">Senha</label>
+                            <input type="password" name="senha" placeholder="Senha" />
+                        </div>
+                        <div className="textfield">
+                            <label htmlFor="senha">Repita sua senha</label>
+                            <input type="password" name="senha" placeholder="Senha" />
+                        </div>
+                        <button className="button">Cadastrar</button>
+                    </div>
                 </div>
-                <label htmlFor="senha">Senha</label>
-                <div>
-                    <FaKey />
-                    <input type="password" name="email" id="senha" placeholder="Senha" />
-                </div>
-                <p>
-                    Já possui conta? <Link to="/login">Faça o login</Link>
-                    <ButtonComponent>Salvar</ButtonComponent>
-                </p>
-            </form>
+            </div>
         </S.Section>
     );
 };

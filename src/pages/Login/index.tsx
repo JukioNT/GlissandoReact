@@ -1,31 +1,32 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { FaKey } from "react-icons/fa"
-import { MdEmail } from "react-icons/md";
+import Lottie from "lottie-react";
+import Person01 from "../../img/Person01.gif"
 
-import * as S from "../Cadastrar/styles";
-import { ButtonComponent } from "components";
+import * as S from "../Login/styles";
 
 const Login = () =>{
     return(
         <S.Section>
-            <h1>Login</h1>
-            <form action="cadastrar.html" method="post">
-                <label htmlFor="email">E-mail</label>
-                <div>
-                    <MdEmail />
-                    <input type="email" name="email" id="email" placeholder="E-mail" />
+            <div className="main">
+                <div className="left">
+                    <h1>Comece a aprender música</h1>
+                    <img src={ Person01 } alt="" />
                 </div>
-                <label htmlFor="senha">Senha</label>
-                <div>
-                    <FaKey />
-                    <input type="password" name="senha" id="senha" placeholder="Senha" />
+                <div className="right">
+                    <div className="form">
+                        <h1>LOGIN</h1>
+                        <div className="textfield">
+                            <label htmlFor="usuario">Usuario</label>
+                            <input type="text" name="usuario" placeholder="Usuário" />
+                        </div>
+                        <div className="textfield">
+                            <label htmlFor="senha">Senha</label>
+                            <input type="password" name="senha" placeholder="Senha" />
+                        </div>
+                        <button className="button">Login</button>
+                    </div>
                 </div>
-                <p>
-                    Não possui conta? <Link to="/cadastrar">Cadastre-se</Link>
-                    <ButtonComponent>Entrar</ButtonComponent>
-                </p>
-            </form>
+            </div>
         </S.Section>
     );
 };

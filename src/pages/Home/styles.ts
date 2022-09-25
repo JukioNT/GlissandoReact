@@ -19,7 +19,6 @@ export const Home = styled.section`
         display:flex;
         justify-content: center;
         width: 100%;
-
     }
     div.assuntos{
         margin-top: 20px;
@@ -38,6 +37,10 @@ export const Home = styled.section`
                 img{
                     height: 300px;
                 }
+                img:hover{
+                    filter: grayscale(50);
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -51,6 +54,7 @@ export const Home = styled.section`
         img{
             height: 60px;
             margin-top: 5px;
+            margin-bottom: 10px;
         }
     }
 `
