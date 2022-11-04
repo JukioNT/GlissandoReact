@@ -1,7 +1,6 @@
 import { FormEvent, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import React from "react";
-import Lottie from "lottie-react";
 import Person01 from "../../img/Person01.gif"
 import { toast } from "react-toastify";
 
@@ -46,6 +45,7 @@ const Login = () =>{
                 <div className="right">
                     <div className="form">
                         <h1>LOGIN</h1>
+                        <form method="post" onSubmit={ handleSubmit }>
                         <div className="textfield">
                             <label htmlFor="usuario">Email</label>
                             <input type="email" name="email" id="email" placeholder="Email" 
@@ -60,9 +60,8 @@ const Login = () =>{
                              value={formData?.password}
                         />
                         </div>
-                        <p>
-                            <button className="button">Login</button>
-                        </p>
+                        <button className="button">Login</button>
+                        </form>
                     </div>
                 </div>
             </div>

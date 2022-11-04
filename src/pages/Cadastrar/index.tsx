@@ -45,26 +45,28 @@ const Cadastrar = () => {
                 <div className="right">
                     <div className="form">
                         <h1>Cadastro</h1>
-                        <div className="textfield">
-                            <label htmlFor="usuario">Usuario</label>
-                            <input type="text" name="usuario" placeholder="Usuário" 
-                            onChange={(e) => handleChange({ name: e.target.value })}
-                            value = {formData?.name}/>
-                        </div>
-                        <div className="textfield">
-                            <label htmlFor="senha">Email</label>
-                            <input type="text" name="email" placeholder="Email" 
-                            onChange={(e) => handleChange({ email: e.target.value })}
-                            value = {formData?.email}/>
-                        </div>
-                        <div className="textfield">
-                            <label htmlFor="senha">Senha</label>
-                            <input type="password" name="senha" placeholder="Senha" 
-                            onChange={(e) => handleChange({ password: e.target.value })}
-                            value = {formData?.password}/>
-                        </div>
-                        <button className="button">Cadastrar</button>
-                    </div>
+                        <form method="post" onSubmit={ handleSubmit }>
+                          <div className="textfield">
+                              <label htmlFor="usuario">Usuario</label>
+                              <input type="text" name="usuario" placeholder="Usuário" 
+                              onChange={(e) => handleChange({ name: e.target.value })}
+                              value = {formData?.name}/>
+                          </div>
+                          <div className="textfield">
+                              <label htmlFor="senha">Email</label>
+                              <input type="text" name="email" placeholder="Email" 
+                              onChange={(e) => handleChange({ email: e.target.value })}
+                              value = {formData?.email}/>
+                          </div>
+                          <div className="textfield">
+                              <label htmlFor="senha">Senha</label>
+                              <input type="password" name="senha" placeholder="Senha" 
+                              onChange={(e) => handleChange({ password: e.target.value })}
+                              value = {formData?.password}/>
+                          </div>
+                          <button className="button">Cadastrar</button>
+                          </form>
+                      </div>
                 </div>
             </div>
         </S.Section>
